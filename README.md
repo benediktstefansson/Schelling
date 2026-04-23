@@ -141,7 +141,7 @@ int content(int i) {
 
 ### Functions to find random location
 
-The random_move function takes an integer argument and returns void (nothing). The argument is the ID number of an agent. The function calls a random number generating function through the get_random_location() function, until it finds an empty cell. It then proceeds to put the agent into the empty sell, and updating the information in the system accordingly.
+The random_move function takes an integer argument and returns void (nothing). The argument is the ID number of an agent. The function calls a random number generating function through the get_random_location() function, until it finds an empty cell. It then proceeds to put the agent into the empty cell, and updating the information in the system accordingly.
 
 The get_random_location() function takes no argument and returns an integer between 0 and the lattice size (which is hardcoded as being 64, i.e. 8 by 8). It accomplishes this by calling the rand() function, which returns an integer between 0 and RAND_MAX. We divide by RAND_MAX and thus get a floating point number between 0 and 1. Multiply this number by the size of the lattice and you get a number between 0 and the lattice_size. Note the casting between variable types, first from int to float and then back to int.
 
